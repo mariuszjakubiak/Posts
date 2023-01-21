@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Posts.Models.PostModel>
+@{
+    ViewData["Title"] = "Posts Page";
+}
+
+<h1>Posts</h1>
+
+<p>
+    <a asp-action="Add" >Add Post <span class="badge bg-secondary">+</span></a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var post in Model) {
+        <tr>
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => post.Title)
+            </td>
+            <td class="text-capitalize">
+                @Html.DisplayFor(modelItem => post.Author)
+            </td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary"><a class="text-light text-decoration-none" asp-action="Edit" asp-route-id="@post.ID">Edit</a></button>
+                    <button type="button" class="btn btn-primary"><a class="text-light text-decoration-none" asp-action="Details" asp-route-id="@post.ID">Details</a></button>
+                    <button type="button" class="btn btn-primary"><a class="text-light text-decoration-none" asp-action="Remove" asp-route-id="@post.ID">Delete</a></button>
+                </div>
+@*                <a asp-action="Edit" asp-route-id="@post.ID">Edit</a>
+                <a asp-action="Details" asp-route-id="@post.ID">Details</a>
+                <a asp-action="Remove" asp-route-id="@post.ID">Delete</a>*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

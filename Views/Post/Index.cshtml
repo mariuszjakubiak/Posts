@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Posts.Models.PostModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-light" >Posts</h1class>
+
+<p>
+    <button type="button" class="btn btn-primary"><a asp-action="Add" class="text-light text-decoration-none">Add Post</i></a></button>
+</p>
+
+<div class="d-flex flex-row justify-content-between gap-3 flex-wrap">
+@foreach (var item in Model) {
+ 
+        <div class="card p-2 text-center">
+            <div class="card-body">
+                <h5 class="card-title text-black">@Html.DisplayFor(modelItem => item.Title)</h5>
+                <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayFor(modelItem => item.Author)</h6>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary"><a class="text-light text-decoration-none" asp-action="Edit" asp-route-id="@item.ID">Edit</a></button>
+                    <button type="button" class="btn btn-primary"><a class="text-light text-decoration-none" asp-action="Details" asp-route-id="@item.ID">Details</a></button>
+                    <button type="button" class="btn btn-primary"><a class="text-light text-decoration-none" asp-action="Remove" asp-route-id="@item.ID">Delete</a></button>
+                </div>
+            </div>
+        </div>
+
+}
+</div>
