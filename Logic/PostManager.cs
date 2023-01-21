@@ -67,11 +67,11 @@ namespace Posts.Logic
             using (var context = new PostContext())
             {
                 var posts = context.Posts.ToList();
-
                 return posts;
+                
             }
-        }
 
-            
+
+        }
     }
 }

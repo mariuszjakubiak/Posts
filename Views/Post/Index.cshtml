@@ -4,13 +4,13 @@
     ViewData["Title"] = "Index";
 }
 
-<h1 class="text-light" >Posts</h1class>
+<h1>Blog</h1>
 
 <p>
     <button type="button" class="btn btn-primary"><a asp-action="Add" class="text-light text-decoration-none">Add Post</i></a></button>
 </p>
 
-<div class="d-flex flex-row justify-content-between gap-3 flex-wrap">
+<div class="d-flex flex-row gap-3 flex-wrap">
 @foreach (var item in Model) {
  
         <div class="card p-2 text-center">

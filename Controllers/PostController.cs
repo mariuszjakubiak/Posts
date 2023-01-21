@@ -13,6 +13,7 @@ namespace Posts.Controllers
             return View(posts);
         }
 
+        
         [HttpGet]
         public IActionResult Add()
         {
