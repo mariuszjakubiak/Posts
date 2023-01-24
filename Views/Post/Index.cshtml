@@ -7,8 +7,18 @@
 <h1>Blog</h1>
 
 <p>
-    <button type="button" class="btn btn-primary"><a asp-action="Add" class="text-light text-decoration-none">Add Post</i></a></button>
+    <a asp-action="Add" class="btn btn-primary text-light text-decoration-none">Add Post</a>
 </p>
+
+<div class="search">
+    <form asp-action="Index">
+            <div class="text-danger"></div>
+            <div class="form-group">
+                <input type="text" name="searchData" />
+                <input type="submit" value="Search" class="btn btn-success" />
+            </div>
+    </form>
+</div>
 
 <div class="d-flex flex-row gap-3 flex-wrap">
 @foreach (var item in Model) {
@@ -18,9 +28,9 @@
                 <h5 class="card-title text-black">@Html.DisplayFor(modelItem => item.Title)</h5>
                 <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayFor(modelItem => item.Author)</h6>
                 <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-primary"><a class="text-light text-decoration-none" asp-action="Edit" asp-route-id="@item.ID">Edit</a></button>
-                    <button type="button" class="btn btn-primary"><a class="text-light text-decoration-none" asp-action="Details" asp-route-id="@item.ID">Details</a></button>
-                    <button type="button" class="btn btn-primary"><a class="text-light text-decoration-none" asp-action="Remove" asp-route-id="@item.ID">Delete</a></button>
+                    <a class="btn btn-primary text-light text-decoration-none" asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                    <a class="btn btn-primary text-light text-decoration-none" asp-action="Details" asp-route-id="@item.ID">Details</a>
+                    <a class="btn btn-primary text-light text-decoration-none" asp-action="Remove" asp-route-id="@item.ID">Delete</a>
                 </div>
             </div>
         </div>

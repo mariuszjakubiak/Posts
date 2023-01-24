@@ -62,16 +62,25 @@ namespace Posts.Logic
         }
 
 
-        public List<PostModel> GetPosts()
+        public List<PostModel> GetPosts(string? searchData)
         {
-            using (var context = new PostContext())
+            if (searchData != null)
+                using (var context = new PostContext())
+                {
+                    var posts = context.Posts.Where(s => s.Title.Contains(searchData)).ToList();
+                    return posts;
+                }
+            else
             {
-                var posts = context.Posts.ToList();
-                return posts;
-                
+                using (var context = new PostContext())
+                {
+                    var posts = context.Posts.ToList();
+                    return posts;
+                }
             }
 
-
         }
+
+
     }
 }

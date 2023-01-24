@@ -7,12 +7,11 @@ namespace Posts.Controllers
     public class PostController : Controller
     {
         PostManager postManager = new PostManager();
-        public IActionResult Index()
+        public IActionResult Index(string? searchData)
         {
-            var posts = postManager.GetPosts();
+            var posts = postManager.GetPosts(searchData);
             return View(posts);
         }
-
         
         [HttpGet]
         public IActionResult Add()
