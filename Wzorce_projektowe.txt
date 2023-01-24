@@ -1,0 +1,62 @@
+Mariusz Jakubiak Z504
+
+
+Kompozyt to wzorzec projektowy pozwalający na traktowanie pojedynczych obiektów i grupy tych obiektów w ten sam sposób. Pozwala na tworzenie złożonych struktur obiektów, składających się z obiektów prostych oraz innych kompozytów. Dzięki temu możliwe jest tworzenie hierarchii obiektów, w której elementy podrzędne mogą być traktowane tak samo jak elementy nadrzędne.
+
+Przykładowe zastosowania:
+	1. Tworzenie hierarchii obiektów: Pozwala na budowanie złożonych struktur obiektów, składających się z pojedynczych obiektów oraz innych kompozytów.
+	2. Abstrakcja: Kompozyt pozwala na traktowanie pojedynczych obiektów i grupy obiektów w ten sam sposób, co ułatwia pracę z różnymi typami obiektów.
+	3. Prosta obsługa złożonych struktur: Dzięki tej hierarchii obiektów, kod jest łatwiejszy do zrozumienia i łatwiejszy w utrzymaniu, ponieważ pojedyncze operacje mogą być odniesione do całej 			struktury zamiast do każdego pojedynczego obiektu.
+	4. Reusability: Kompozyt jest często używany jako składnik innych wzorców projektowych, takich jak CompositeView, który udostępnia interfejs do pracy z kompozytami jako zbiorami kontrolek w GUI.
+
+
+
+Obserwator to wzorzec projektowy, który pozwala na subskrypcję określonych zdarzeń lub zmian stanu obiektu. Klasy, które chcą być powiadamiane o takich zdarzeniach, implementują interfejs Obserwatora, a klasa, która generuje te zdarzenia, jest znana jako Obserwowany. Obserwowany posiada listę subskrybentów (Obserwatorów) i powiadamia ich o zdarzeniach.
+
+Przykładowe zastosowania:
+	1. Dynamiczne powiadamianie: Obserwator pozwala na subskrypcję zmian stanu obiektu, co umożliwia dynamiczne powiadamianie klas o zmianach.
+	2. Decoupling: Dzięki wykorzystaniu tego wzorca, klasy nie muszą być ze sobą bezpośrednio powiązane, co zwiększa elastyczność i łatwość utrzymania kodu.
+	3. Obsługa wielu subskrybentów: Wzorzec Obserwator pozwala na obsługę wielu subskrybentów, co jest przydatne w przypadku, gdy kilka klas musi być powiadomionych o zmianach.
+
+
+
+Strategia to wzorzec projektowy, który pozwala na dynamiczne przypisanie algorytmu do danej klasy. Klasa, która korzysta z algorytmu, posiada interfejs do tego algorytmu, a konkretny algorytm jest przypisywany przez ustawienie odpowiedniej implementacji tego interfejsu. Dzięki temu, możliwe jest zmiana algorytmu wykorzystywanego przez klasę bez konieczności modyfikowania jej kodu.
+
+Przykładowe zastosowania:
+	1. Elastyczność: Pozwala na dynamiczne przypisanie algorytmu do danej klasy, co umożliwia łatwą zmianę zachowania klasy w zależności od kontekstu lub warunków.
+	2. Decoupling: Dzięki wykorzystaniu tego wzorca, klasa nie jest związana z konkretnym algorytmem, co zwiększa elastyczność i łatwość utrzymania kodu.
+	3. Prosta obsługa różnych algorytmów: Wzorzec Strategia pozwala na łatwą obsługę różnych algorytmów w jednej klasie, co jest przydatne w przypadku, gdy klasa musi wykonywać różne operacje w 			zależności od kontekstu.
+	4. Open-Closed principle: Wzorzec Strategii pozwala na rozszerzanie zachowania klasy poprzez dodanie nowych implementacji interfejsu bez modyfikowania kodu klasy.
+
+
+
+Metoda Wytwórcza to wzorzec projektowy, który pozwala na oddzielenie kodu tworzącego obiekty od kodu, który korzysta z tych obiektów. Wzorzec składa się z interfejsu fabryki oraz klas konkretnych fabryk, które implementują interfejs. Klasy konkretne fabryki odpowiedzialne są za tworzenie konkretnych obiektów. Metoda Wytwórcza polega na tym, że tworzymy abstrakcyjną fabrykę, która posiada metodę wytwórczą produkującą obiekty. Następnie tworzymy konkretne fabryki implementujące abstrakcyjną fabrykę, które tworzą konkretne obiekty. Klasa klienta, która korzysta z obiektów, nie zna szczegółów ich tworzenia, tylko zna interfejs fabryki. Dzięki temu jest odizolowana od procesu tworzenia obiektów.
+
+Przykładowe zastosowania:
+	1. Oddzielenie kodu tworzącego obiekty od kodu korzystającego z nich: Pozwala na oddzielenie procesu tworzenia obiektów od kodu, który z nich korzysta, co zwiększa czytelność i łatwość utrzymania 		kodu.
+	2. Abstrakcja: Metoda Wytwórcza pozwala na abstrakcję procesu tworzenia obiektów, co umożliwia łatwą zmianę sposobu tworzenia obiektów bez modyfikowania kodu korzystającego z nich.
+	3. Prosta obsługa różnych typów obiektów: Wzorzec Metoda Wytwórcza pozwala na łatwą obsługę różnych typów obiektów, które są tworzone w różnych sytuacjach.
+	4. Open-Closed principle: Wzorzec Metoda Wytwórcza pozwala na rozszerzanie zakresu tworzonych obiektów poprzez dodanie nowych fabryk bez modyfikowania kodu klasy klienta.
+
+
+
+Dekorator – wzorzec projektowy należący do grupy wzorców strukturalnych. Pozwala na dodanie nowej funkcji do istniejących klas dynamicznie podczas działania programu.
+Wzorzec dekoratora polega na opakowaniu oryginalnej klasy w nową klasę „dekorującą”. Zwykle przekazuje się oryginalny obiekt jako parametr konstruktora dekoratora, metody dekoratora wywołują metody oryginalnego obiektu i dodatkowo implementują nową funkcję.
+Dekoratory są alternatywą dla dziedziczenia. Dziedziczenie rozszerza zachowanie klasy w trakcie kompilacji, w przeciwieństwie do dekoratorów, które rozszerzają klasy w czasie działania programu. 
+
+Przykładowe zastosowania:
+	1. Dodawanie dynamicznie nowych funkcjonalności do już istniejących obiektów.
+	2. Tworzenie nowych obiektów złożonych z podstawowych obiektów i dodatkowych funkcjonalności.
+	3. Elastyczne konfigurowanie obiektów i ich zachowania.
+	4. Łatwe rozszerzanie funkcjonalności obiektów bez konieczności tworzenia nowych klas.
+
+
+
+
+
+
+
+
+
+
+
